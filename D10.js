@@ -124,28 +124,16 @@ console.log(deleteOne("Kateryna", false));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
-// let onlyLetters = (stringa) => {
-//   let str = stringa.split("");
-//   console.log(str);
-//   let strScomposed = str.map((letter) => {
-//     if (
-//       letter === "0" ||
-//       letter === "1" ||
-//       letter === "2" ||
-//       letter === "3" ||
-//       letter === "4" ||
-//       letter === "5" ||
-//       letter === "6" ||
-//       letter === "7" ||
-//       letter === "8" ||
-//       letter === "9"
-//     ) {
-//       return strScomposed.remove("");
-//     }
-//   });
-//   return str;
-// };
-// onlyLetters("Hi, I love you 2");
+let onlyLetters = (stringa) => {
+  let newStringa = "";
+  for (let i = 0; i < stringa.length; i++) {
+    if (isNaN(stringa[i])) {
+      newStringa += stringa[i];
+    }
+  }
+  return newStringa;
+};
+console.log(onlyLetters("ciao123mondo456"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
