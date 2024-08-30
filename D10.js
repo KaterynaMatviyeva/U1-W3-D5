@@ -151,6 +151,14 @@ console.log(deleteOne("Kateryna", false));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+let isThisAnEmail = (stringa) => {
+  if (stringa.includes("@") && stringa.includes(".")) {
+    return true;
+  }
+  return false;
+};
+console.log(isThisAnEmail("katiaemme96@yahoo.it"));
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
